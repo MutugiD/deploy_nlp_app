@@ -5,8 +5,10 @@ Basic ML project converted to MLOPs steps for deploying to AWS Lambda using Dock
 Basically went on Kaggle, and downloaded one with sufficient data. Then copy and pasted old code. 
 
 ## How do I build the model?
-
-Make sure you have [conda](https://docs.conda.io/en/latest/miniconda.html) installed. Then, install the requirements with `bash install_requirements.sh`.
+Running on Ubuntu 20.04  
+Make sure you have [conda](https://docs.conda.io/en/latest/miniconda.html) installed.  
+Create env `conda create -n nlp_app` and then activate `conda activate nlp_app`.  
+Then, install the requirements with `bash install_requirements.sh`.
 
 Finally, you can build the model by running `python build_model.py` on the terminal.
 
