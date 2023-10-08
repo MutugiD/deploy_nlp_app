@@ -28,9 +28,9 @@ def __build_start_message():
 
 def load_data():
     print("Loading datasets")
-    train_df = pd.read_csv("/home/ubuntu/deploy_nlp_app/model_dev/data/emotion-labels-train.csv")
-    val_df = pd.read_csv("/home/ubuntu/deploy_nlp_app/model_dev/data/emotion-labels-vals.csv")
-    test_df = pd.read_csv("/home/ubuntu/deploy_nlp_app/model_dev/data/emotion-labels-test.csv")
+    train_df = pd.read_csv("model-dev/data/emotion-labels-train.csv")
+    val_df = pd.read_csv("model-dev/data/emotion-labels-vals.csv")
+    test_df = pd.read_csv("model-dev/data/emotion-labels-test.csv")
     return train_df, val_df, test_df
 
 
@@ -101,4 +101,3 @@ def build():
 
 if __name__ == "__main__":
     build()
-

@@ -10,14 +10,15 @@ Make sure you have [conda](https://docs.conda.io/en/latest/miniconda.html) insta
 Create env `conda create -n nlp_app` and then activate `conda activate nlp_app`.  
 Then, install the requirements with `bash install_requirements.sh`.
 
-Finally, you can build the model by running `python build_model.py` on the terminal.
+Finally, you can build the model by running `python3 build_model.py` on the terminal.
 
 ## How do I test the app?
 
-`RUNNING_LOCAL=True python -m app.main`
+`RUNNING_LOCAL=True python3 -m app.main`
 or
 `RUNNING_LOCAL=True FILENAME=model-dev/data/emotion-labels-test.csv python -m app.main`
-where `FILENAME` is any file with `text` in the header.
+where `FILENAME` is any file with `text` in tconda env remove -n <environment_name>
+he header.
 
 ## Directory structure
 
@@ -35,6 +36,11 @@ General steps to deploy your code include
 1.  Build your machine learning model and pipeline
 2.  Create/setup a AWS account
 3.  Package your code in a Docker container
+--aws configure via AWS CLI toolkit 
+--AWS-docker auth `aws ecr get-login-password --region <your-region> | docker login --username AWS --password-stdin <your-account-id>.dkr.ecr.<your-region>.amazonaws.com`
+--build image `docker build -t deploy-nlp-app .`
+--tag docker image `docker tag deploy-nlp-app:latest <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/deploy-nlp-app:latest`
+--push docker image `docker push <your-account-id>.dkr.ecr.<your-region>.amazonaws.com/deploy-nlp-app:latest`
 4.  Upload your Docker image to AWS Elastic Container Registry (ECR)
 5.  Create your AWS Lambda to run the ECR image
 6.  Run/test/configure your AWS Lambda
