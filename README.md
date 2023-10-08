@@ -1,24 +1,21 @@
 # DEPLOY-NPL-MODEL
 Basic ML project converted to MLOPs steps for deploying to AWS Lambda using Docker.
 
-## Data Science Process
-Basically went on Kaggle, and downloaded one with sufficient data. Then copy and pasted old code. 
+## ML Process
+Basically went on Kaggle, and downloaded one with sufficient data.   
 
 ## How do I build the model?
 Running on Ubuntu 20.04  
-Make sure you have [conda](https://docs.conda.io/en/latest/miniconda.html) installed.  
-Create env `conda create -n nlp_app` and then activate `conda activate nlp_app`.  
-Then, install the requirements with `bash install_requirements.sh`.
+Have [conda](https://docs.conda.io/en/latest/miniconda.html) installed.  
+Create env `conda create -n nlp_app` and then activate `conda activate nlp_app`.   
+Install the requirements with `bash install_requirements.sh`.  
+Build the model by running `python3 build_model.py` on the terminal.  
 
-Finally, you can build the model by running `python3 build_model.py` on the terminal.
-
-## How do I test the app?
-
-`RUNNING_LOCAL=True python3 -m app.main`
-or
+## How do I test the app?  
+`RUNNING_LOCAL=True python3 -m app.main` or    
 `RUNNING_LOCAL=True FILENAME=model-dev/data/emotion-labels-test.csv python -m app.main`
 where `FILENAME` is any file with `text` in tconda env remove -n <environment_name>
-he header.
+in the header.  
 
 ## Directory structure
 
