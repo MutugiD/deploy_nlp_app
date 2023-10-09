@@ -1,5 +1,6 @@
 tmp/
 __pycache__/
 *.code-workspace
-template.py
+
 requirements.txt
+template.py
