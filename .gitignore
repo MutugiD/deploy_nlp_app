@@ -3,4 +3,4 @@ __pycache__/
 *.code-workspace
 
 requirements.txt
-template.py
+
