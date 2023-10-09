@@ -42,21 +42,21 @@ General steps to deploy your code include
 5.  Create your AWS Lambda to run the ECR image  
 --create a lambda role and add these permission policies  
 
->>AmazonS3FullAccess  
->>AWSLambdaBasicExecutionRole  
->>AWSXRayDaemonWriteAccess  
+>AmazonS3FullAccess  
+>AWSLambdaBasicExecutionRole  
+>AWSXRayDaemonWriteAccess  
 
 --create a lambda function with the existing Docker image (deploy-nlp-app:latest)  
 6.  Run/test/configure your AWS Lambda  
 --configuration and triggers  
 
->>Bucket arn: arn:aws:s3:::deploy-nlp-app  
->>Event types: s3:ObjectCreated:Put  
->>Prefix (new folder in s3): new_nlp_data/ 
->>Service principal: s3.amazonaws.com  
->>Source account: <aws-account-id>
->>Statement ID: <lambda-id>
->>Suffix: csv /json  
+>Bucket arn: arn:aws:s3:::deploy-nlp-app  
+>Event types: s3:ObjectCreated:Put  
+>Prefix (new folder in s3): new_nlp_data/ 
+>Service principal: s3.amazonaws.com  
+>Source account: <aws-account-id>
+>Statement ID: <lambda-id>
+>Suffix: csv /json  
 
 --test and run the configurations  
 --set triggers and test by uploading to Prefix (new folder in s3)  
