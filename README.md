@@ -46,7 +46,6 @@ General steps to deploy your code include
 >>AWSLambdaBasicExecutionRole  
 >>AWSXRayDaemonWriteAccess  
 
-
 --create a lambda function with the existing Docker image (deploy-nlp-app:latest)  
 6.  Run/test/configure your AWS Lambda  
 --configuration and triggers  
@@ -61,7 +60,6 @@ General steps to deploy your code include
 
 --test and run the configurations  
 --set triggers and test by uploading to Prefix (new folder in s3)  
-
 7.  Deliver your results to others who may need the results  
 8.  CI/CD 
 
