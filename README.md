@@ -1,9 +1,6 @@
 # DEPLOY-NPL-MODEL
 Basic ML project converted to MLOPs steps for deploying to AWS Lambda using Docker.
 
-## ML Process
-Basically went on Kaggle, and downloaded one with sufficient data.   
-
 ## How do I build the model?
 Running on Ubuntu 20.04  
 Have [conda](https://docs.conda.io/en/latest/miniconda.html) installed.  
